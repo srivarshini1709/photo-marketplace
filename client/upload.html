@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+
+  <title>Upload Photo</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+
+    <form id="uploadForm" class="form">
+
+      <h2>Upload Photo</h2>
+
+      <input
+        type="text"
+        id="title"
+        placeholder="Photo title"
+        required
+      />
+
+      <textarea
+        id="description"
+        placeholder="Photo description"
+        rows="4"
+      ></textarea>
+
+      <input
+        type="file"
+        id="image"
+        accept="image/*"
+        required
+      />
+      <img
+  id="previewImage"
+  style="
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+    display: none;
+  "
+/>
+
+      <button type="submit">
+        Upload
+      </button>
+
+    </form>
+
+  </div>
+<script>
+
+  const token =
+  localStorage.getItem("token");
+
+  if (!token) {
+
+    alert(
+      "Please login first"
+    );
+
+    window.location.href =
+    "login.html";
+  }
+
+</script>
+  <script src="script.js"></script>
+
+</body>
+</html>

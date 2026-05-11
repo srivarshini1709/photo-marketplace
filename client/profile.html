@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+
+  <title>Profile</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+
+    <h1>My Profile</h1>
+
+    <div id="navLinks"></div>
+
+  </nav>
+
+
+  <section class="profile-section">
+
+    <div class="profile-card">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+        class="profile-avatar"
+      />
+
+      <h2 id="profileName">
+        Loading...
+      </h2>
+
+      <p id="profileEmail">
+        Loading...
+      </p>
+
+      <p id="totalUploads">
+        Total Uploads: 0
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section
+    class="gallery"
+    id="profileGallery"
+  >
+
+  </section>
+
+
+  <script>
+
+    const token =
+    localStorage.getItem("token");
+
+    if (!token) {
+
+      alert(
+        "Please login first"
+      );
+
+      window.location.href =
+      "login.html";
+    }
+
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
