@@ -89,7 +89,7 @@ async function fetchPhotos() {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/photos"
+      "https://photo-marketplace.onrender.com/api/photos"
     );
 
     const photos = await response.json();
@@ -157,7 +157,7 @@ if (searchInput) {
       e.target.value.toLowerCase();
 
       const response = await fetch(
-        "http://localhost:5000/api/photos"
+        "https://photo-marketplace.onrender.com/api/photos"
       );
 
       const photos =
@@ -247,7 +247,7 @@ if (registerForm) {
       try {
 
         const response = await fetch(
-          "http://localhost:5000/api/auth/register",
+          "https://photo-marketplace.onrender.com/api/auth/register",
           {
             method: "POST",
 
@@ -319,7 +319,7 @@ if (loginForm) {
       try {
 
         const response = await fetch(
-          "http://localhost:5000/api/auth/login",
+          "https://photo-marketplace.onrender.com/api/auth/login",
           {
             method: "POST",
 
@@ -434,7 +434,7 @@ if (uploadForm) {
         try {
 
           const response = await fetch(
-            "http://localhost:5000/api/photos",
+            "https://photo-marketplace.onrender.com/api/photos",
             {
               method: "POST",
 
@@ -500,7 +500,7 @@ async function likePhoto(id) {
   try {
 
     await fetch(
-      `http://localhost:5000/api/photos/like/${id}`,
+      `https://photo-marketplace.onrender.com/api/photos/like/${id}`,
       {
         method: "PUT",
       }
@@ -534,7 +534,7 @@ async function fetchMyPhotos() {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/photos/my/photos",
+      "https://photo-marketplace.onrender.com/api/photos/my/photos",
       {
         headers: {
           Authorization:
@@ -597,7 +597,7 @@ async function deletePhoto(id) {
   try {
 
     await fetch(
-      `http://localhost:5000/api/photos/${id}`,
+      `https://photo-marketplace.onrender.com/api/photos/${id}`,
       {
         method: "DELETE",
 
@@ -673,7 +673,7 @@ async function loadProfile() {
 
     // Get user photos
     const response = await fetch(
-      "http://localhost:5000/api/photos/my/photos",
+      "https://photo-marketplace.onrender.com/api/photos/my/photos",
       {
         headers: {
           Authorization:
